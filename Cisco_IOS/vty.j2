@@ -1,4 +1,4 @@
-{% for vty in config_context["vty"] %}
+{% for vty in config_context["global-vty"] %}
 session-timeout {{ vty["session-timeout"] }}
 exec-timeout {{ vty["exec-timeout"] }}
 {% endfor %}
