@@ -1,0 +1,8 @@
+aaa authentication login default group RAD-NAC-CP cache RAD-NAC-CP local
+aaa authentication login AUT-LOG-SW-AUTH group RAD-NAC-CP cache RAD-NAC-CP local
+aaa authentication dot1x default group RAD-NAC-CP cache RAD-NAC-CP
+aaa authorization console
+aaa authorization exec default group RAD-NAC-CP cache RAD-NAC-CP if-authenticated
+aaa authorization exec AUT-LOG-SW-AUTH group RAD-NAC-CP cache RAD-NAC-CP local if-authenticated
+aaa authorization network default group RAD-NAC-CP cache RAD-NAC-CP local if-authenticated
+aaa authorization network AUT-LOG-SW-AUTH group RAD-NAC-CP cache RAD-NAC-CP local
