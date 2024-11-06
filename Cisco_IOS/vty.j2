@@ -1,6 +1,3 @@
-{% set start_pattern = r'^line vty \\d+.+' %}
-{% set end_pattern = r'^!$' %}
-{% set repeated = True %}
 {% for vty in config_context["vty"] %}
 session-timeout {{ vty["session-timeout"] }}
 exec-timeout {{ vty["exec-timeout"] }}
