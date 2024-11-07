@@ -2,8 +2,13 @@
 {% set end_pattern = '^!$' %}
 {% set repeated = True %}
 {% set in_block = False %}
+{% set stop_loop = False %}
 
 {% for line in config.splitlines() %}
+  {%- if stop_loop %}
+    {%- break %}
+  {%- endif %}
+
   {%- if line is match(start_pattern) %}
     {%- set in_block = True %}
   {%- elif in_block and line is match(end_pattern) %}
@@ -21,6 +26,6 @@
   {% endif %}
 
   {% if not repeated and in_block %}
-    {%- break %}
+    {%- set stop_loop = True %}
   {% endif %}
 {% endfor %}
