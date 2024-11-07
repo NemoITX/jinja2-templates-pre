@@ -1,4 +1,4 @@
-{% for value in [config_context["vty"]] %}
-session-timeout {{ value["session-timeout"] }}
-exec-timeout {{ value["exec-timeout"] }}
+{% for vty in line vty %}
+session-timeout {{ config_context["vty"]["session-timeout"] }}
+exec-timeout {{ config_context["vty"]["exec-timeout"] }}
 {% endfor %}
