@@ -1,4 +1,4 @@
-{% for interface in interfaces %}
+{% for interface in device["interfaces"] %}
 {% if 'Loop' in interface["name"] %}
 {% include "./ios/_loopback.j2" %}
 {% endif %}
