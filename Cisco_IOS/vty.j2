@@ -1,7 +1,0 @@
-{% for interface in interfaces %}
-interface {{ interface["name"] }}
-description {{ interface["description"] }}
-{% if interface["enabled"] == false %}
-shutdown
-{% endif %}
-{% endfor %}
