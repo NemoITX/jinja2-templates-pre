@@ -1,4 +1,3 @@
-{{ config_context["vty"]["exec-timeout"] }}
-{% for x in config_context %}
-exec x
+{% for x in tags %}
+exec {{ x }}
 {% endfor %}
