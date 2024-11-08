@@ -1,3 +1,4 @@
+{{ config_context["vty"]["exec-timeout"] }}
 {% for interface in interfaces %}
 {% if 'Loop' in interface["name"] %}
 {% include "./ios/_loopback.j2" %}
