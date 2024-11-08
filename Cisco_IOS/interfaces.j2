@@ -1,5 +1,5 @@
 {{ config_context["vty"]["exec-timeout"] }}
-{% for x in config_context["vty"] %}
+{% for x in config_context %}
 exec x
 {% endfor %}
 {% for interface in interfaces %}
