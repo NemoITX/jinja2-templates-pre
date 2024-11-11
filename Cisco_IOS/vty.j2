@@ -1,7 +1,8 @@
-session-timeout 15
-exec-timeout 15 0
-privilege level 15
-authorization exec AUT-LOG-SW-AUTH
-logging synchronous
-login authentication AUT-LOG-SW-AUTH
-transport input ssh
+line vty
+ session-timeout 15
+ exec-timeout 15 0
+ privilege level 15
+ authorization exec AUT-LOG-SW-AUTH
+ logging synchronous
+ login authentication AUT-LOG-SW-AUTH
+ transport input ssh
