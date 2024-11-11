@@ -1,3 +1,6 @@
+{% set start_pattern = '^line vty \\d+.+' %}
+{% set end_pattern = '^!$' %}
+{% set repeated = True %}
  session-timeout 15
  exec-timeout 15 0
  privilege level 15
